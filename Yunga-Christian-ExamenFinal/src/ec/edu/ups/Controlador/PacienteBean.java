@@ -35,6 +35,16 @@ public class PacienteBean implements Serializable {
 		
 	}
 	
+	
+	
+	public List<Paciente> getPacienteList() {
+		return pacienteList;
+	}
+
+	public void setPacienteList(List<Paciente> pacienteList) {
+		this.pacienteList = pacienteList;
+	}
+
 	public String add() {
 		ejbPacienteFacade.create(new Paciente());
 		pacienteList = ejbPacienteFacade.findAll();
